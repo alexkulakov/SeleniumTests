@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-//using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace SeleniumTests
 {
@@ -23,8 +23,13 @@ namespace SeleniumTests
         public void TestMethod1()
         {
             _webDriver = new ChromeDriver();
+            PageObject1 page = new PageObject1();
+            PageFactory.InitElements(_webDriver, page);
+            
             _webDriver.Navigate().GoToUrl("http://google.com");
-            Assert.AreEqual("Fake Google", _webDriver.Title);
+            Assert.AreEqual("Fake Google", page.Btn.GetAttribute("value"));
+            //Assert.AreEqual("Fake Google", page.Container[0].GetAttribute("value"));
+            //Assert.AreEqual("Fake Google", _webDriver.Title);
         }
     }
 }
