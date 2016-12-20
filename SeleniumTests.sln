@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests", "SeleniumTests\SeleniumTests.csproj", "{17604800-DA4D-4135-AB01-228DD110509E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildAgentCi", "BuildAgentCi\BuildAgentCi.csproj", "{FB3E5269-5F0D-4E43-A57B-D222927D2AEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{2ED4B449-FA61-4D94-9C16-A54383C29C41}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\docker-compose.yml = Deploy\docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +22,12 @@ Global
 		{17604800-DA4D-4135-AB01-228DD110509E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17604800-DA4D-4135-AB01-228DD110509E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17604800-DA4D-4135-AB01-228DD110509E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3E5269-5F0D-4E43-A57B-D222927D2AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3E5269-5F0D-4E43-A57B-D222927D2AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3E5269-5F0D-4E43-A57B-D222927D2AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3E5269-5F0D-4E43-A57B-D222927D2AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://kulakov.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SeleniumTests\\SeleniumTests.csproj
-		SccProjectName1 = SeleniumTests
-		SccLocalPath1 = SeleniumTests
 	EndGlobalSection
 EndGlobal
